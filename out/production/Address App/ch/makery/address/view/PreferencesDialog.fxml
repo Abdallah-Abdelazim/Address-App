@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="350.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.PreferencesDialogController">
+   <children>
+      <ButtonBar layoutX="70.0" layoutY="203.0" prefHeight="33.0" prefWidth="211.0" AnchorPane.bottomAnchor="10.0">
+        <buttons>
+          <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOK" text="OK" />
+            <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+      <Accordion expandedPane="$dateFormatPane" layoutX="50.0" layoutY="25.0" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+        <panes>
+          <TitledPane fx:id="dateFormatPane" text="Date Format">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="dd/MM/yyyy">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="dateFormats" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="yyyy/MM/dd" toggleGroup="$dateFormats" />
+                                    <RadioButton mnemonicParsing="false" text="dd-MM-yyyy" toggleGroup="$dateFormats" />
+                                    <RadioButton mnemonicParsing="false" text="yyyy-MM-dd" toggleGroup="$dateFormats" />
+                                    <RadioButton mnemonicParsing="false" text="dd.MM.yyyy" toggleGroup="$dateFormats" />
+                                    <RadioButton mnemonicParsing="false" text="yyyy.MM.dd" toggleGroup="$dateFormats" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </content>
+          </TitledPane>
+          <TitledPane fx:id="languagePane" expanded="false" text="Language (Not yet implemented)">
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="English">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="languages" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="العربية" toggleGroup="$languages" />
+                                    <RadioButton mnemonicParsing="false" text="français" toggleGroup="$languages" />
+                                    <RadioButton mnemonicParsing="false" text="italiano" toggleGroup="$languages" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>
