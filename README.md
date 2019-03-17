@@ -1,6 +1,6 @@
-# Address-App
-Address App using JavaFX &amp; FXML
+# AddressApp
+Address book app using JavaFX with FXML.
 IntelliJ IDEA Project
 
-## Download
+## Try the app
 Download a runnable JAR file from [releases](https://github.com/Abdallah-Abdelazim/Address-App/releases/latest).
